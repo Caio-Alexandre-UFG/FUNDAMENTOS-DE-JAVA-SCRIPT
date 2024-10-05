@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo da Idade</title>
+</head>
+<body>
+    <h1>Cálculo da Idade</h1>
+    <form id="idadeForm">
+        <label for="anoNascimento">Digite o ano de nascimento:</label>
+        <input type="number" id="anoNascimento"><br><br>
+        <button type="button" onclick="calcularIdade()">Calcular Idade</button>
+    </form>
+    <p id="resultadoIdade"></p>
+
+    <script>
+        function calcularIdade() {
+            let anoNascimento = parseInt(document.getElementById("anoNascimento").value);
+            let anoAtual = new Date().getFullYear();
+            let idade = anoAtual - anoNascimento;
+
+            document.getElementById("resultadoIdade").innerText = `Quem nasceu em ${anoNascimento} irá completar ${idade} anos em ${anoAtual}.`;
+        }
+    </script>
+</body>
+</html>

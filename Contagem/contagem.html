@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contagem até N</title>
+</head>
+<body>
+    <h1>Contagem de 1 até N</h1>
+    <form id="contagemForm">
+        <label for="valorN">Digite o valor de N:</label>
+        <input type="number" id="valorN"><br><br>
+        <button type="button" onclick="contarAteN()">Contar</button>
+    </form>
+    <p id="resultadoContagem"></p>
+
+    <script>
+        function contarAteN() {
+            let N = parseInt(document.getElementById("valorN").value);
+            let contagem = "";
+
+            for (let i = 1; i <= N; i++) {
+                contagem += i + (i < N ? ", " : "");
+            }
+
+            document.getElementById("resultadoContagem").innerText = `Contagem de 1 até ${N} é: ${contagem}`;
+        }
+    </script>
+</body>
+</html>

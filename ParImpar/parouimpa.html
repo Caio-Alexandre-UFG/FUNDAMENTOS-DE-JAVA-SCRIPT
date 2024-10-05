@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+    <h1>Verificação de Par ou Ímpar</h1>
+    <form id="parImparForm">
+        <label for="numeroParImpar">Digite um número:</label>
+        <input type="number" id="numeroParImpar"><br><br>
+        <button type="button" onclick="verificarParImpar()">Verificar</button>
+    </form>
+    <p id="resultadoParImpar"></p>
+
+    <script>
+        function verificarParImpar() {
+            let numeroInformado = parseInt(document.getElementById("numeroParImpar").value);
+            let resultado = (numeroInformado % 2 === 0) ? "par" : "ímpar";
+
+            document.getElementById("resultadoParImpar").innerText = `O número ${numeroInformado} que foi digitado é ${resultado}!`;
+        }
+    </script>
+</body>
+</html>
